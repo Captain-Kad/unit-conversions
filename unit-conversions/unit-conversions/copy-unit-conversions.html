@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Conversions</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <h1 style="text-align: center">Unit Conversion Program</h1>
+          <p style="font-size: larger">
+            This program is capable of calculating multiple conversions
+            including <strong>cm to mm, °C to °F, m to km</strong> and vice
+            versa<strong>(m to cm...)</strong>
+          </p>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="row" style="margin-top: 10px">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <select id="singleUnitSelect" class="form-control form-control-lg select-opt" onchange="changeUnit(this.id, 'multipleUnitSelect')">
+            <option selected disabled>Select one of the units below</option>
+            <option id="Length" value="Length">Length</option>
+            <option id="Temperature" value="Temperature">Temperature</option>
+            <option id="Distance" value="Distance">Distance</option>
+        </select>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+
+      <div class="row" style="margin-top: 10px">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <select id="multipleUnitSelect" class="form-control form-control-lg select-opt">
+            <option selected disabled>Select one of the units below</option>
+          </select>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+
+      <!-- <option id="centimeter" value="centimeter">Centimeter to Millimeter</option>
+      <option id="millimeter" value="millimeter">Millimeter to Centimeter</option>
+      <option id="fahrenheit" value="fahrenheit">Fahrenheit to Celsius</option>
+      <option id="celsius" value="celsius">Celsius to Fahrenheit</option>
+      <option id="meter" value="meter">Meter to Kilometer</option>
+      <option id="kilometer" value="kilometer">Kilometer to Meter</option> -->
+
+      <div class="row" style="margin-top: 20px">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <input
+            id="numInput"
+            class="form-control"
+            type="number"
+            placeholder="Please enter the number you wish to convert"
+            required
+          />
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+
+      <div class="row" style="margin-top: 10px">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <button style="width: 100%;" id="button" class="btn btn-primary btn-area" onclick="convertOnChoice()">Convert</button>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+
+      <div class="row" style="margin-top: 10px">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 alert alert-success" style="height: 70px;">
+          <h2><span id="result"></span></h2>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+
+    <script src="copy-unit-conversions.js"></script>
+  </body>
+</html>
